@@ -14,5 +14,18 @@ public class Main {
 
         String s5 = "Hello WorldHello";
         //will refer to object in String Pool - s3
+
+        String str1 = new String("Hello");
+        //New Object in Heap Memory
+
+        String str2 = new String("Hello");
+        //New Object in Heap Memory
+
+        System.out.println(str1==str2); //false
+
+        String str3 = "Hello";
+        //Creating in String Pool
+
+        System.out.println(str1==str3); //false
     }
 }

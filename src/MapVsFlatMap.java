@@ -4,25 +4,29 @@ import java.util.stream.Collectors;
 
 public class MapVsFlatMap {
     public static void main(String[] args) {
-        List<String> words = Arrays.asList("Hello", "World");
+        //Map Demo
+
+        List<String> words = Arrays.asList("Hello", "Everyone");
 
         List<String> upperCaseWords = words.stream()
                 .map(String::toUpperCase)
                 .collect(Collectors.toList());
 
-        System.out.println("Using map: " + upperCaseWords);
+        System.out.println("Using Map: " + upperCaseWords);
 
+        //FlatMap Demo
         List<List<Integer>> nestedList = Arrays.asList(
-                Arrays.asList(1,2,3),
-                Arrays.asList(4,5,6),
-                Arrays.asList(7,8,9)
+                Arrays.asList(1, 2, 3),
+                Arrays.asList(4, 5, 6),
+                Arrays.asList(7, 8, 9)
         );
 
-         List<Integer> flattenedList = nestedList.stream()
+        List<Integer> flattenList = nestedList.stream()
                 .flatMap(List::stream)
-                 .map(n -> n*2)
+                .map(num -> num*3)
                 .collect(Collectors.toList());
 
-        System.out.println(flattenedList);
+        System.out.println("Using FlatMap: " + flattenList);
+
     }
 }

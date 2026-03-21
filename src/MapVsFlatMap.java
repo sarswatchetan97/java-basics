@@ -28,5 +28,5 @@ public class MapVsFlatMap {
 
         System.out.println("Using FlatMap: " + flattenList);
 
-    }
+ }
 }

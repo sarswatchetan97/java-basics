@@ -114,5 +114,75 @@ public class CollectionFramework1 {
         System.out.println(integerStack.search(42));
 
         System.out.println(integerStack.empty());
+
+//        Java Queue Interface
+        Queue<Integer> queue = new LinkedList<>();
+        queue.offer(1);
+        queue.offer(2);
+        queue.offer(3);
+
+        System.out.println(queue);
+
+        System.out.println("Removing: " + queue.poll());
+
+        System.out.println(queue);
+
+        System.out.println("Peeking: " + queue.peek());
+
+        Deque<Integer> deque = new ArrayDeque<>();
+//        Deque<Integer> deque1 = new LinkedList<>();
+        deque.offer(2);
+        deque.offerFirst(12);
+        deque.offerLast(21);
+
+        System.out.println("Deque - " + deque);
+
+        Queue<Integer> priorityQueue = new PriorityQueue<>((a,b) -> b - a);
+        //default behavior -> Integers -> less value -> high priority -> minHeap
+        //maxHeap -> Integers -> high value -> high priority
+        //comparator -> strings -> pq
+        priorityQueue.offer(31);
+        priorityQueue.offer(29);
+        priorityQueue.offer(36);
+        priorityQueue.offer(30);
+
+        System.out.println("Priority Queue - " + priorityQueue);
+
+//        Set Interface -> unique elements
+        Set<Integer> set = new HashSet<>();
+        Set<Integer> set1 = new HashSet<>();
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        set.add(4);
+
+        set1.add(3);
+        set1.add(4);
+        set1.add(5);
+        set1.add(6);
+
+        System.out.println("Set:- " + set);
+        System.out.println(set.retainAll(set1));
+        System.out.println(set.containsAll(set1));
+
+        //HashSet -> Order is not preserved -> O(1)
+        //LinkedHashSet -> Order is preserved -> O(n)
+        //TreeSet -> Sorted set -> O(log(n))
+
+        Set<Integer> set2 = new LinkedHashSet<>();
+        set2.add(21);
+        set2.add(24);
+        set2.add(19);
+        set2.add(18);
+
+        System.out.println(set2);
+
+        Set<Integer> set3 = new TreeSet<>();
+        set3.add(21);
+        set3.add(24);
+        set3.add(19);
+        set3.add(18);
+
+        System.out.println(set3);
     }
 }

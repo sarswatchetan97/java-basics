@@ -12,5 +12,13 @@ public class SortInDescendingOrder {
                 .sorted(Comparator.reverseOrder()).toList();
 
         System.out.println(result);
+
+        List<Double> doubleList = Arrays.asList(12.45, 23.58, 17.13, 42.89, 33.78, 71.85, 56.98,
+                21.12);
+
+        List<Double> doubleResult = doubleList.stream()
+                .sorted(Comparator.reverseOrder()).toList();
+
+        System.out.println(doubleResult);
     }
 }

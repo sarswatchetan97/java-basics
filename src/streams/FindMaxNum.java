@@ -12,5 +12,9 @@ public class FindMaxNum {
                 .max(Comparator.naturalOrder()).orElse(0);
 
         System.out.println(maxNum);
+
+        //2nd method
+        int maximumNumber = numbers.stream().max((o1, o2) -> o1 - o2).orElse(0);
+        System.out.println(maximumNumber);
     }
 }
